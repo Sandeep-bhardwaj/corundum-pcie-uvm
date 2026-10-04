@@ -1,0 +1,15 @@
+# Tier 1a regression list. Format: <tier> <test> [seed ...]
+# Implements : VERIFICATION_STRATEGY.md  §16.4, §19 E1 (>=20 seeds for closure)
+#
+# Bring-up ladder order. The first three are confirmed passing on VCS
+# X-2025.06-SP1; the remaining seven are new and unproven.
+1a t1a_reset             1
+1a t1a_reg_access        1
+1a t1a_dequeue_basic     1
+1a t1a_enable_disable    1
+1a t1a_dequeue_empty     1
+1a t1a_commit_ordering   1
+1a t1a_op_table_full     1
+1a t1a_ptr_wrap          1
+1a t1a_doorbell          1
+1a t1a_random_stress     1 2 3 4 5

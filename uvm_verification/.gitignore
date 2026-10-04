@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------------
+# uvm_verification/.gitignore
+# ---------------------------------------------------------------------------
+
+# Third-party sources, fetched rather than vendored. See README.md "Setup".
+# Accellera UVM 1800.2-2020.3.1 from github.com/accellera-official/uvm-core.
+ext/
+
+# ---- simulation output ----------------------------------------------------
+results/
+# EDA Playground exports: generated on demand by make_eda_playground.py.
+edaplayground/
+# Vivado xsim/xelab/xvlog scratch written to the cwd.
+*.pb
+xsim.dir/
+*.jou
+*.wdb
+*.vcd
+*.wlf
+*.fst
+*.lxt
+transcript
+
+# ---- cocotb / Icarus build trees ------------------------------------------
+# runner.py builds per tier into pyuvm/sim_build/<tier>/; check_icarus.py
+# elaborates into pyuvm/sim_build_check/. Both are ~15 MB of regenerable
+# object code and neither belongs in the history.
+sim_build/
+sim_build_check/
+*.vvp
+
+# ---- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ---- editor / OS ----------------------------------------------------------
+*~
+*.swp
+*.bak
+*.orig
+.DS_Store

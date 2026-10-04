@@ -1,0 +1,19 @@
+# Local tool and editor configuration, and secrets
+.env
+.vscode/
+.idea/
+*~
+*.swp
+
+# Vivado scratch written to whatever directory a tool was started in
+*.jou
+*.pb
+xsim.dir/
+.Xil/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Simulation output, build trees and fetched sources are ignored in
+# uvm_verification/.gitignore (results/, edaplayground/, ext/, sim_build/).
